@@ -44,6 +44,22 @@
     align-items: center;
 }
 
+#page4{
+    font-family: Microsoft JhengHei,'Courier New', Courier, monospace;
+    background-color: rgb(240, 255, 109);
+    height: 100vh;
+    /* 內容透過 flex 呈現 */
+    display: flex;
+    /* 軸線方向 */
+    flex-direction:column;
+    /* 超出是否換行 */
+    flex-wrap: wrap;
+    /* 主軸對齊的對齊方式 */
+    justify-content: center;
+    /* 交錯軸的對齊方式 */
+    align-items: center;
+}
+
 
 .content {
     /* linear-gradient([<angle> | to <side-or-corner>]? , <color-stop-list>)m */
@@ -66,5 +82,11 @@
 }
 
 #Time{
-    margin-top: -20em;
+    margin-top: -20rem;
 }
+#xinbao{
+    width: 50vh;
+}
+/* #xinbao{
+    margin-top: -20rem;
+} */

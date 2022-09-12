@@ -36,8 +36,15 @@
 						Hello, HTML & CSS & JavaScript!
 					</h1>
 					<h1 id="Time">現在時間</h1>
+
+					<br />
 				</div>
-				...
+				<div class="swiper-slide" id="page4">
+					<h1>空白鍵開始星爆</h1>
+
+					<img src="./img/xinbao-0000.jpg" id="xinbao" />
+					<h2 id="xinbaoTimes">十秒星爆了　?　次</h2>
+				</div>
 			</div>
 
 			<!-- If we need navigation buttons -->
@@ -45,12 +52,10 @@
 			<div class="swiper-button-next"></div>
 		</div>
 
-		
 		<script>
 			let TimeElement = document.getElementById("Time");
 			// 時間
 			function TimeSetter() {
-                
 				let timestamp = Date.now();
 				let date = new Date(timestamp).toString().toLocaleString();
 				TimeElement.innerText = date;
@@ -111,12 +116,41 @@
 			TextColor();
 			TextWave(content, 0);
 		</script>
-        <script>
+
+		<script>
+			const xinBaoSize = 10;
+			let currnetImg = 0;
+			let xinBaoElement = document.getElementById("xinbao");
+			let xinBaoTimesElement = document.getElementById("xinbaoTimes");
+			let xinbaoTimes=0;
+			function changeImg() {
+				if (currnetImg > 9) currnetImg = 0;
+				let imgsrc = "./img/xinbao-000" + currnetImg + ".jpg";
+				xinBaoElement.setAttribute("src", imgsrc);
+				currnetImg++;
+				xinbaoTimes++;
+				xinBaoTimesElement.innerText="十秒星爆了　"+xinbaoTimes+"　次"
+			}
+			
+		</script>
+		<script>
+			var body = document.body;
+			function goXinBao(e) {
+				switch(e.keyCode){
+					case 32:
+						changeImg()
+					break;
+				}
+				console.log(e.keyCode); //查鍵盤代碼
+			}
+			body.addEventListener("keydown", goXinBao, false); //偵測按下按鍵的行為
+		</script>
+		<script>
 			const swiper = new Swiper(".swiper", {
 				// Optional parameters
 				direction: "horizontal",
 				loop: true,
-				
+
 				// If we need pagination
 				pagination: {
 					el: ".swiper-pagination",
@@ -134,7 +168,7 @@
 				},
 				keyboard: {
 					enabled: true,
-                    onlyInViewport: false,
+					onlyInViewport: false,
 				},
 			});
 		</script>
