@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="./style.css" />
+		<style>
+			.swiper {
+				width: 100%;
+				height: 100vh;
+			}
+		</style>
+		<title>HTML/CSS Tutorial</title>
+	</head>
+	<body>
+		<!-- Slider main container -->
+		<div class="swiper">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide">
+					<h1>Hello, HTML!</h1>
+				</div>
+				<div class="swiper-slide" id="page2">
+					<h1 class="content">Hello, HTML & CSS!</h1>
+				</div>
+				<div class="swiper-slide" id="page3">
+					<h1 class="content" id="Hello">
+						Hello, HTML & CSS & JavaScript!
+					</h1>
+					<h1 id="Time">現在時間</h1>
+				</div>
+				...
+			</div>
+
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+
+		
+		<script>
+			let TimeElement = document.getElementById("Time");
+			// 時間
+			function TimeSetter() {
+                
+				let timestamp = Date.now();
+				let date = new Date(timestamp).toString().toLocaleString();
+				TimeElement.innerText = date;
+			}
+			TimeSetter();
+			setInterval(TimeSetter, 1000);
+			// 波浪文字
+			let content = document.getElementById("Hello");
+			let size = 1;
+			let msg = "";
+			let color = [
+				"linear-gradient(to top, black, gray, black, gray)",
+				"linear-gradient(to top, gray, black, gray, black)",
+			];
+			let aa = ["red", "blue", "green"];
+			async function sleep(ms = 0) {
+				return new Promise((r) => setTimeout(r, ms));
+			}
+			async function TextColor() {
+				while (1) {
+					content.style["background"] = color[size % 3];
+					content.style["-webkit-background-clip"] = "text";
+					content.style["-webkit-text-fill-color"] = "transparent";
+					size += 1;
+					await sleep(500);
+				}
+			}
+
+			function TextWave(obj, n) {
+				var theText = "Hello, HTML & CSS & JavaScript!";
+				var output = "";
+				for (var i = 0; i < theText.length; i++) {
+					var size =
+						60 *
+							Math.abs(
+								Math.sin(((i + n) * 3.14) / theText.length)
+							) +
+						10;
+					output +=
+						"<span style='font-size:" +
+						size +
+						"px;color:green'>" +
+						theText.substring(i, i + 1) +
+						"</span>";
+				}
+				obj.innerHTML = output;
+				if (n > theText.length) {
+					n = 0;
+				} else {
+					n++;
+				}
+
+				setTimeout(function () {
+					TextWave(obj, n);
+				}, 100);
+			}
+
+			TextColor();
+			TextWave(content, 0);
+		</script>
+        <script>
+			const swiper = new Swiper(".swiper", {
+				// Optional parameters
+				direction: "horizontal",
+				loop: true,
+				
+				// If we need pagination
+				pagination: {
+					el: ".swiper-pagination",
+				},
+
+				// Navigation arrows
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+
+				// And if we need scrollbar
+				scrollbar: {
+					el: ".swiper-scrollbar",
+				},
+				keyboard: {
+					enabled: true,
+                    onlyInViewport: false,
+				},
+			});
+		</script>
+	</body>
+</html>

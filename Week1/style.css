@@ -1,0 +1,70 @@
+
+#container {
+    background-color: rgb(240, 255, 109);
+    height: 100vh;
+    /* 內容透過 flex 呈現 */
+    display: flex;
+    /* 軸線方向 */
+    flex-direction:row;
+    /* 超出是否換行 */
+    flex-wrap: wrap;
+    /* 主軸對齊的對齊方式 */
+    justify-content: center;
+    /* 交錯軸的對齊方式 */
+    align-items: center;
+}
+#page2{
+    font-family: Microsoft JhengHei,'Courier New', Courier, monospace;
+    background-color: rgb(240, 255, 109);
+    height: 100vh;
+    /* 內容透過 flex 呈現 */
+    display: flex;
+    /* 軸線方向 */
+    flex-direction:row;
+    /* 超出是否換行 */
+    flex-wrap: wrap;
+    /* 主軸對齊的對齊方式 */
+    justify-content: center;
+    /* 交錯軸的對齊方式 */
+    align-items: center;
+}
+#page3{
+    font-family: Microsoft JhengHei,'Courier New', Courier, monospace;
+    background-color: rgb(240, 255, 109);
+    height: 100vh;
+    /* 內容透過 flex 呈現 */
+    display: flex;
+    /* 軸線方向 */
+    flex-direction:row;
+    /* 超出是否換行 */
+    flex-wrap: wrap;
+    /* 主軸對齊的對齊方式 */
+    justify-content: center;
+    /* 交錯軸的對齊方式 */
+    align-items: center;
+}
+
+
+.content {
+    /* linear-gradient([<angle> | to <side-or-corner>]? , <color-stop-list>)m */
+    /* background: linear-gradient(to top,#3a1c71, #d76d77, #ffaf7b); */
+    /* 背景裁切範圍 */
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    /* -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text; */
+    
+    text-align:center;
+    font-weight: bold;
+    
+    flex-grow: 1;	
+    flex-shrink: 1;
+    flex-basis:100%;
+    font-size: 3rem;
+}
+
+#Time{
+    margin-top: -20em;
+}
