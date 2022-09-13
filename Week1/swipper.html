@@ -27,10 +27,13 @@
 				<!-- Slides -->
 				<div class="swiper-slide">
 					<h1>Hello, HTML!</h1>
-					<p>HyperText Makeup Language</p>
+					
+					<p>HyperText 把它拆成 Hyper 和 Text，Text是文字，那HyperText就是超級文字!</p>
+					<p>HyperText Makeup Language 用來超文字標註的語言</p>
 				</div>
 				<div class="swiper-slide" id="page2">
 					<h1 class="content">Hello, HTML & CSS!</h1>
+					<p class="content">字體顏色大小設定、排版、動畫 等等的設定</p>
 				</div>
 				<div class="swiper-slide" id="page3">
 					<h1 class="content" id="Hello">
@@ -73,11 +76,12 @@
 			body.addEventListener("keydown", goXinBao, false); //偵測按下按鍵的行為
 		</script>
 		<script>
+			
 			const swiper = new Swiper(".swiper", {
 				// Optional parameters
 				direction: "horizontal",
 				loop: true,
-
+				
 				// If we need pagination
 				pagination: {
 					el: ".swiper-pagination",
@@ -98,6 +102,10 @@
 					onlyInViewport: false,
 				},
 			});
+
+			let hash =location.hash.split('#')[1];
+			console.log(hash);
+			swiper.slideTo(hash);
 		</script>
 	</body>
 </html>
