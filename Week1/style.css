@@ -15,7 +15,8 @@
 }
 #page2{
     font-family: Microsoft JhengHei,'Courier New', Courier, monospace;
-    background-color: rgb(240, 255, 109);
+    background-color: rgb(27, 27, 27);
+    color: rgb(230, 230, 230);
     height: 100vh;
     /* 內容透過 flex 呈現 */
     display: flex;
@@ -30,7 +31,8 @@
 }
 #page3{
     font-family: Microsoft JhengHei,'Courier New', Courier, monospace;
-    background-color: rgb(240, 255, 109);
+    background-color: rgb(27, 27, 27);
+    color: rgb(230, 230, 230);
     height: 100vh;
     /* 內容透過 flex 呈現 */
     display: flex;
@@ -46,7 +48,8 @@
 
 #page4{
     font-family: Microsoft JhengHei,'Courier New', Courier, monospace;
-    background-color: rgb(240, 255, 109);
+    background-color: rgb(27, 27, 27);
+    color: rgb(230, 230, 230);
     height: 100vh;
     /* 內容透過 flex 呈現 */
     display: flex;
