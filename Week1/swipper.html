@@ -76,6 +76,7 @@
 			body.addEventListener("keydown", goXinBao, false); //偵測按下按鍵的行為
 		</script>
 		<script>
+			let hash =location.hash.split('#')[1];
 			
 			const swiper = new Swiper(".swiper", {
 				// Optional parameters
@@ -102,10 +103,8 @@
 					onlyInViewport: false,
 				},
 			});
-
-			let hash =location.hash.split('#')[1];
 			console.log(hash);
-			swiper.slideTo(hash);
+			swiper.slideto(hash);
 		</script>
 	</body>
 </html>
