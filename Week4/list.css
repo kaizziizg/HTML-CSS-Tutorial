@@ -1,0 +1,26 @@
+*{
+    font-family: monospace;
+    font-size: 1.5rem;
+}
+ul {
+    
+	background: #fffc33;
+	padding: 10px;
+}
+/* ul 裡面的 li */
+ul li{
+    /* list-style-image: url(./coin.gif); */
+    list-style: none;
+    background: #cce5ff;
+    color: darkblue;
+    margin: 5px;
+}
+
+li::before {
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    background-image: url(./coin.gif);
+    background-size:contain;
+}
