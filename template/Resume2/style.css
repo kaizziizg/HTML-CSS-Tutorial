@@ -1,0 +1,182 @@
+:root{
+    --bgColor: rgb(255, 255, 255);
+    --fontcolor : rgb(70,70,70);
+    --topColor : rgb(226,205,138);
+    --githubImg : url("img/contact/github.png");
+    --gmailImg : url("img/contact/gmail.png");
+    --headPhoto : url("img/headphoto.png");
+}
+* {
+    font-family: "Noto Sans CJK TC", "Microsoft JhengHei", PingFang, STHeiti, sans-serif, serif;
+}
+
+body {
+    width: 210mm;
+    height: 297mm;
+    padding: 30px;
+    background-color: var(--bgColor);
+    color: var(--fontcolor);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 15px;
+    border-bottom: solid 10px #E2CD8A;
+}
+
+.top,.bottom{
+    padding: 20px;
+}
+
+.top{
+    
+    font-weight: bold;
+    border-radius: 5px;
+    flex:3;
+    background-color: var(--topColor);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    line-height: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.bottom{
+    flex:7;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bottomRight,.bottomLeft{
+    padding: 20px;
+}
+
+.bottomRight{
+    flex:1;
+}
+.bottomLeft{
+    flex:1;
+}
+
+.photo{
+    padding: 20px;
+    flex:2;
+    
+}
+.info{
+    padding: 20px;
+    flex: 3;
+}
+
+.headshot{
+    width: 100%;
+    border-radius: 50%;
+}
+.name{
+    text-align: center;
+}
+
+.contact ul{
+    padding: 0px;
+    list-style: none;
+}
+
+.contact ul li{
+    margin-top: 1rem;
+}
+
+.jobTitle{
+    padding-bottom: 2rem;
+    border-bottom: 0.3rem solid rgb(223, 223, 223);
+}
+.infoContent{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    /* border-bottom: 0.3rem solid rgb(223, 223, 223); */
+}
+#github::before {
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+    background-image: var(--githubImg);
+    background-size:contain;
+}
+
+#gmail::before {
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+    background-image: var(--gmailImg);
+    background-size:contain;
+}
+
+.etc::before {
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+    background-repeat:no-repeat;
+    background-image: var(--headPhoto);
+    background-size:100%;
+    background-position:center;
+}
+
+/* 左邊欄位 ul li */
+.education{
+    font-size: 0.8rem;
+    list-style: none;
+    padding: 0px;
+    line-height: 1rem;
+}
+
+.education span{
+    font-weight: bold;
+}
+
+.education p{
+    padding-left: 0.5rem;
+}
+
+.eduInfo{
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: solid 4px #E2CD8A;
+}
+
+
+/* 右邊欄位 技能框框 */
+.proLang{
+    display:inline-block;
+    background-color: #E2CD8A;
+    color: #fff;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    margin: 0.1rem;
+    font-size: 0.8rem;
+}
+
+.otherSkill{
+    display:inline-block;
+    background-color: #fff;
+    color: #E2CD8A;
+    border: 1px solid #E2CD8A;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+

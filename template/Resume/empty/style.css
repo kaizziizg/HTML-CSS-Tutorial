@@ -1,0 +1,48 @@
+:root{
+    --bgColor: rgb(255, 255, 255);
+    --fontcolor : rgb(70,70,70);
+
+}
+* {
+    font-family: noto sans cjk tc regular; 
+}
+
+body {
+    width: 210mm;
+    height: 297mm;
+    padding: 30px;
+    background-color: var(--bgColor);
+    color: var(--fontcolor);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    border-bottom: solid 10px #E2CD8A;
+}
+
+.left,.right {
+    padding: 20px;
+    
+}
+
+.left{
+    background-color: var(--bgColor);
+    flex: 5;
+    padding-right: 50px;
+    border-right: solid 1px #000000;
+    }
+.right{
+    background-color: var(--bgColor);
+    flex: 7;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+

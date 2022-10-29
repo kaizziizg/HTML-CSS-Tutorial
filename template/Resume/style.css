@@ -1,0 +1,124 @@
+:root{
+    --bgColor: rgb(255, 255, 255);
+    --fontcolor : rgb(70,70,70);
+    --githubImg : url("img/contact/github.png");
+    --gmailImg : url("img/contact/gmail.png");
+
+}
+* {
+    font-family: noto sans cjk tc regular; 
+}
+
+
+body {
+    width: 210mm;
+    height: 297mm;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    color: #707070;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    border-bottom: solid 10px #E2CD8A;
+}
+
+.left,.right {
+    padding: 20px;
+    
+}
+
+.left{
+    background-color: var(--bgColor);
+    flex: 5;
+    padding-right: 50px;
+    border-right: solid 1px #000000;
+    }
+.right{
+    background-color: var(--bgColor);
+    flex: 7;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.headshot{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.contact ul{
+    padding: 0px;
+    list-style: none;
+}
+
+.contact ul li{
+    margin-top: 1rem;
+}
+#github::before {
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+    background-image: var(--githubImg);
+    background-size:contain;
+}
+
+#gmail::before {
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+    background-image: var(--gmailImg);
+    background-size:contain;
+}
+
+.proLang{
+    display:inline-block;
+    background-color: #E2CD8A;
+    color: #fff;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    margin: 0.1rem;
+    font-size: 0.8rem;
+}
+
+.otherSkill{
+    display:inline-block;
+    background-color: #fff;
+    color: #E2CD8A;
+    border: 1px solid #E2CD8A;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+.education{
+    font-size: 0.8rem;
+    list-style: none;
+    padding: 0px;
+    line-height: 1rem;
+}
+
+.education span{
+    font-weight: bold;
+}
+
+.education p{
+    padding-left: 0.5rem;
+}
+
+.eduInfo{
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: solid 4px #E2CD8A;
+}
+
