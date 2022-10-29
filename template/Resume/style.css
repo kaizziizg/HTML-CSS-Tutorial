@@ -27,8 +27,13 @@ body {
     background-color: #fff;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    padding: 20px;
+    /* padding: 20px; */
     border-bottom: solid 10px #E2CD8A;
+}
+
+.content{
+    display: flex;
+    padding: 20px;
 }
 
 .left,.right {
