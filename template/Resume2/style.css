@@ -1,3 +1,27 @@
+/* 
+--- root
+    |-- body
+        |-- container --content
+                        |-- top
+                        |   |-- photo 
+                        |   |-- info
+                        |       |-- jobTitle
+                        |       |-- infoContent
+                        |       |-- contact
+                        |           |- github::before
+                        |           |- gmail::before
+                        |           |- etc::before
+                        |-- bottom
+                            |-- bottomLeft 
+                            |   |-- education
+                            |       |-- eduInfo
+                            |-- bottomRight 
+                                |-- skill
+                                    |-- proLang
+                                    |-- otherSkill
+*/
+
+
 :root{
     --bgColor: rgb(255, 255, 255);
     --fontcolor : rgb(70,70,70);
